@@ -34,11 +34,9 @@ export class IosCalculatorComponent implements OnInit {
     @Input() height = 667/2;
     @Input() color = "black";
 
-    @HostBinding('style.container.backgroudColor')
-    bgColor: string = 'red' ;
-
-    // @HostBinding('style.topContainer.cardDisplay.backgroundColor')
-    // bgColor2: string = 'blue';
+    //@HostBinding('class.container.backgroudColor')
+    @HostBinding('class.container.backgroudColor')
+    bgColor: string = 'blue' ;
 
     constructor(
         private calculatorRef: ElementRef,
