@@ -22,7 +22,7 @@ export class IosCalculatorComponent implements OnInit {
     REAL_WIDTH = 750;
     REAL_HEIGHT = 1334;
 
-    @ViewChild('container') containerRef: ElementRef;
+    @ViewChild('container',{static:false}) containerRef: ElementRef;
     calculator: HTMLElement;
     container: HTMLElement;
 
