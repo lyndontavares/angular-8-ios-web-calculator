@@ -7,17 +7,17 @@
 }
 
 .container {
-    min-width: 750px;
-    max-width: 750px;
-    min-height: 1334px;
-    max-height: 1334px;
+    min-width: 375px;
+    max-width: 375px;
+    min-height: 602px;
+    max-height: 602px;
     display: flex;
     flex-direction: column;
     background: black;
-    padding: 0px 33px 32px 32px;
+    padding: 0px 16px 16px 16px;
     border-style: solid;
     border-width: 1px;
-    border-radius: 75px;
+    border-radius: 37px;
     cursor: default;
     button {
         outline: unset;
@@ -31,15 +31,15 @@
     justify-content: flex-end;
     .calc-display {
         flex: 1;
-        height: 100px;
-        font-size: 190px;
-        font-weight: 100;
-        margin: 0px -5px 50px 0px;
+        height: 50px;
+        font-size: 95px;
+        font-weight: 50;
+        margin: 0px -2px 25px 0px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         color: white;
-        letter-spacing: -9px;
+        letter-spacing: -4px;
     }
 }
 
@@ -58,17 +58,17 @@
         background: #fcc78d;
     }
     .right-operator {
-        margin: 28px 0px 0px 0px;
+        margin: 14px 0px 0px 0px;
         padding: 0px;
-        width: 150px;
-        height: 150px;
-        border-radius: 75px;
-        font-size: 88px;
+        width: 75px;
+        height: 75px;
+        border-radius: 37px;
+        font-size: 44px;
         border: none;
         background: #ff9500;
         color: white;
-        padding-bottom: 12px;
-        padding-right: 3px;
+        padding-bottom: 6px;
+        padding-right: 1px;
     }
     .active {
         background: white;
@@ -82,21 +82,21 @@
         background: #737373;
     }
     .number {
-        margin: 28px 24px 0px 0px;
+        margin: 14px 12px 0px 0px;
         padding: 0px;
-        width: 150px;
-        height: 150px;
-        border-radius: 75px;
-        font-size: 72px;
+        width: 75px;
+        height: 75px;
+        border-radius: 37px;
+        font-size: 37px;
         border: none;
         background: #333333;
         color: white;
-        padding-right: 3px;
+        padding-right: 1px;
         transition: background 500ms ease-out;
     }
     .zero {
-        width: 328px;
-        padding-left: 52px;
+        width: 164px;
+        padding-left: 26px;
         text-align: left;
     }
 }
@@ -107,12 +107,12 @@
         background: #d9d9d9;
     }
     .symbol {
-        margin: 28px 24px 0px 0px;
+        margin: 14px 12px 0px 0px;
         padding: 0px;
-        width: 150px;
-        height: 150px;
-        border-radius: 75px;
-        font-size: 58px;
+        width: 75px;
+        height: 75px;
+        border-radius: 37px;
+        font-size: 29px;
         border: none;
         background: #a6a6a6;
         color: black;

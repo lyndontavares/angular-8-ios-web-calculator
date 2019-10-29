@@ -19,15 +19,15 @@ import { build$ } from 'protractor/built/element';
 })
 export class IosCalculatorComponent implements OnInit {
 
-    REAL_WIDTH = 750;
-    REAL_HEIGHT = 1334;
+    REAL_WIDTH = 750/2;
+    REAL_HEIGHT = 1334/2;
 
     @ViewChild('container',{static:false}) containerRef: ElementRef;
     calculator: HTMLElement;
     container: HTMLElement;
 
-    @Input() width = 375;
-    @Input() height = 667;
+    @Input() width = 375/2;
+    @Input() height = 667/2;
 
     state: State = INITIAL_STATE;
 
