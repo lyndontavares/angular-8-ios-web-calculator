@@ -4,6 +4,8 @@ import {
     DoCheck,
     ElementRef,
     HostListener,
+    HostBinding,
+    Renderer2,
     Input,
     OnChanges,
     OnInit,
@@ -22,17 +24,25 @@ export class IosCalculatorComponent implements OnInit {
     REAL_WIDTH = 750/2;
     REAL_HEIGHT = 1334/2;
 
-    @ViewChild('container',{static:false}) containerRef: ElementRef;
+    @ViewChild('container',{static:true}) containerRef: ElementRef;
     calculator: HTMLElement;
     container: HTMLElement;
 
+    state: State = INITIAL_STATE;
+
     @Input() width = 375/2;
     @Input() height = 667/2;
+    @Input() color = "black";
 
-    state: State = INITIAL_STATE;
+    @HostBinding('style.container.backgroudColor')
+    bgColor: string = 'red' ;
+
+    // @HostBinding('style.topContainer.cardDisplay.backgroundColor')
+    // bgColor2: string = 'blue';
 
     constructor(
         private calculatorRef: ElementRef,
+        private renderer: Renderer2, 
     ) { }
 
     ngOnInit() {
@@ -41,9 +51,8 @@ export class IosCalculatorComponent implements OnInit {
 
         this.onResize();
 
-        // 5 + 10 / 2 * 2 * 3 + 7 - 1 = 41
-        // const result = chain(add(chain(multiply(10), divide(2), multiply(2))(3)), add(7), minus(1))(5);
-        // console.log(result === 41, result);
+        // this.renderer.setElementStyle(this.calculatorRef.nativeElement, 'container.background', 'black');
+        console.log(this.bgColor)
     }
 
     onResize() {
