@@ -1,18 +1,5 @@
-import {
-    AfterViewChecked,
-    Component,
-    DoCheck,
-    ElementRef,
-    HostListener,
-    HostBinding,
-    Renderer2,
-    Input,
-    OnChanges,
-    OnInit,
-    SimpleChanges,
-    ViewChild
-    } from '@angular/core';
-import { build$ } from 'protractor/built/element';
+import { AfterViewChecked, Component, DoCheck, ElementRef, HostListener,
+    HostBinding, Renderer2, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'ios-calculator',
@@ -51,6 +38,7 @@ export class IosCalculatorComponent implements OnInit {
 
         // this.renderer.setElementStyle(this.calculatorRef.nativeElement, 'container.background', 'black');
         console.log(this.bgColor)
+        this.renderer.setStyle(this.calculatorRef.nativeElement, 'container.backgroudColor', 'red');
     }
 
     onResize() {
